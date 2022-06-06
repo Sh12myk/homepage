@@ -46,15 +46,30 @@ html{
 }
 
 /*========== Variables Dark theme ==========*/
-
+body.dark-theme{
+  --title-color: #F2F2F2;
+  --text-color: #BFBFBF;
+  
+  --container-color: #212121;
+  --container-color-alt: #181616;
+  --body-color: #2B2B2B;
+}
 
 /*========== Button Dark/Light ==========*/
+.change-theme{
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  display:flex;
+  color:var(--text-color);
+  font-size:1.2rem;
+  cursor: pointer;
+}
 
+.change-theme:hover{
+  color:var(--title-color);
+}
 
-/*========== Font size variables to scale cv ==========*/
-
-
-/*========== Generate PDF button ==========*/
 
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
@@ -88,6 +103,21 @@ a{
 img{
   max-width: 100%;
   height: auto
+}
+.home__button-movil{
+  display: inline-block;
+  border: 2px solid var(--text-color);
+  color: var(--title-color);
+  padding: 1rem 2rem;
+  border-radius: .25rem;
+  transition: .3s;
+  font-weight: var(--font-medium);
+  margin-top: var(--mb-3) 0;
+}
+
+.home__button-movil:hover{
+  background-color:var(--text-color);
+  color: var(--container-color);
 }
 
 /*========== CLASS CSS ==========*/
@@ -254,7 +284,7 @@ img{
   border-radius: .25rem;
   transition: .3s;
   font-weight: var(--font-medium);
-  margin-top: var(--mb-3)0;
+  margin-top: var(--mb-3) 0;
 }
 
 .home__button-movil:hover{
@@ -500,9 +530,6 @@ img{
     gap:1.5rem;
   }
 
-  .home__button-movil{
-    display:none;
-  }
   
   .cats__container{
     display:flex;
@@ -515,6 +542,9 @@ img{
   .interests__container{
     grid-template-columns: repeat(6, max-content);
     column-gap:1,5rem
+  }
+  .generate-pdf{
+    display:inline-block;
   }
 }
 
